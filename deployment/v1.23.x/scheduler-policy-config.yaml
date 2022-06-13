@@ -1,0 +1,14 @@
+apiVersion: kubescheduler.config.k8s.io/v1beta2
+kind: KubeSchedulerConfiguration
+clientConnection:
+  kubeconfig: /etc/kubernetes/scheduler.conf
+extenders:
+- urlPrefix: "http://127.0.0.1:31868/xpushare-scheduler"
+  filterVerb: filter
+  bindVerb: bind
+  enableHTTPS: false
+  nodeCacheCapable: true
+  managedResources:
+  - name: baidu.com/xpu-mem
+    ignoredByScheduler: false
+  ignorable: false
