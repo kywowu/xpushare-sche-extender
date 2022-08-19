@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: xpu-pod
-        image: ubuntu:16.04
+        image: ubuntu:20.04
         command:
           - /bin/sleep
           - 10h
